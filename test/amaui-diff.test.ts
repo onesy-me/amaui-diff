@@ -3,18 +3,11 @@ import * as AmauiUtils from '@amaui/utils';
 
 import { assert } from '@amaui/test';
 
-import { startBrowsers, IBrowsers, evaluate, closeBrowsers } from '../utils/js/test/utils';
+import { evaluate } from '../utils/js/test/utils';
 
 import AmauiDiff from '../src';
 
 group('@amaui/diff', () => {
-  let browsers: IBrowsers;
-
-  pre(async () => browsers = await startBrowsers());
-
-  post(async () => {
-    await closeBrowsers(browsers);
-  });
 
   group('AmauiDiff', () => {
 
@@ -51,7 +44,7 @@ group('@amaui/diff', () => {
         ];
 
         return values_;
-      }, { browsers });
+      });
       const valueNode = values_;
       const values = [valueNode, ...valueBrowsers];
 
@@ -77,7 +70,7 @@ group('@amaui/diff', () => {
         ];
 
         return values_;
-      }, { browsers });
+      });
       const valueNode = values_;
       const values = [valueNode, ...valueBrowsers];
 
@@ -185,7 +178,7 @@ public static ImageIcon getImageIcon(String path)
         ];
 
         return values_;
-      }, { browsers });
+      });
       const valueNode = values_;
       const values = [valueNode, ...valueBrowsers];
 
@@ -217,7 +210,7 @@ public static ImageIcon getImageIcon(String path)
         ];
 
         return values_;
-      }, { browsers });
+      });
       const valueNode = values_;
       const values = [valueNode, ...valueBrowsers];
 
@@ -303,7 +296,7 @@ public static ImageIcon getImageIcon(String path)
           ];
 
           return values_;
-        }, { browsers });
+        });
         const valueNode = values_;
         const values = [valueNode, ...valueBrowsers];
 
@@ -373,7 +366,7 @@ public static ImageIcon getImageIcon(String path)
           ];
 
           return values_;
-        }, { browsers });
+        });
         const valueNode = values_;
         const values = [valueNode, ...valueBrowsers];
 
@@ -417,7 +410,7 @@ public static ImageIcon getImageIcon(String path)
         ];
 
         return values_;
-      }, { browsers });
+      });
       const valueNode = values_;
       const values = [valueNode, ...valueBrowsers];
 
@@ -465,7 +458,7 @@ public static ImageIcon getImageIcon(String path)
         ];
 
         return values_;
-      }, { browsers });
+      });
       const valueNode = values_;
       const values = [valueNode, ...valueBrowsers];
 
@@ -489,7 +482,7 @@ public static ImageIcon getImageIcon(String path)
           ];
 
           return values_;
-        }, { browsers });
+        });
         const valueNode = values_;
         const values = [valueNode, ...valueBrowsers];
 
@@ -511,7 +504,7 @@ public static ImageIcon getImageIcon(String path)
           ];
 
           return values_;
-        }, { browsers });
+        });
         const valueNode = values_;
         const values = [valueNode, ...valueBrowsers];
 
@@ -533,7 +526,7 @@ public static ImageIcon getImageIcon(String path)
           ];
 
           return values_;
-        }, { browsers });
+        });
         const valueNode = values_;
         const values = [valueNode, ...valueBrowsers];
 
@@ -557,7 +550,7 @@ public static ImageIcon getImageIcon(String path)
           ];
 
           return values_;
-        }, { browsers });
+        });
         const valueNode = values_;
         const values = [valueNode, ...valueBrowsers];
 
@@ -584,7 +577,7 @@ public static ImageIcon getImageIcon(String path)
             ];
 
             return values_;
-          }, { browsers });
+          });
           const valueNode = values_;
           const values = [valueNode, ...valueBrowsers];
 
@@ -626,7 +619,7 @@ public static ImageIcon getImageIcon(String path)
         ];
 
         return values_;
-      }, { browsers });
+      });
       const valueNode = values_;
       const values = [valueNode, ...valueBrowsers];
 
@@ -669,7 +662,7 @@ public static ImageIcon getImageIcon(String path)
         ];
 
         return values_;
-      }, { browsers });
+      });
       const valueNode = values_;
       const values = [valueNode, ...valueBrowsers];
 
@@ -711,7 +704,7 @@ public static ImageIcon getImageIcon(String path)
         ];
 
         return values_;
-      }, { browsers });
+      });
       const valueNode = values_;
       const values = [valueNode, ...valueBrowsers];
 
