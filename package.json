@@ -1,6 +1,6 @@
 {
   "name": "@amaui/diff",
-  "version": "1.0.11111",
+  "version": "1.0.11114",
   "description": "Diff algorithm",
   "repository": "https://github.com/amaui-org/amaui-diff.git",
   "author": "Lazar <lazareric.com@gmail.com>",
@@ -42,7 +42,7 @@
     "test": "yarn lint && yarn type && yarn build && yarn test:pre && yarn cov && yarn test:post"
   },
   "dependencies": {
-    "@amaui/utils": "^1.0.1874",
+    "@amaui/utils": "^1.0.11114",
     "@babel/runtime": "^7.18.3"
   },
   "devDependencies": {
