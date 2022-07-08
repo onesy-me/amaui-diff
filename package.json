@@ -1,6 +1,6 @@
 {
   "name": "@amaui/diff",
-  "version": "1.0.11114",
+  "version": "1.0.11117",
   "description": "Diff algorithm",
   "repository": "https://github.com/amaui-org/amaui-diff.git",
   "author": "Lazar <lazareric.com@gmail.com>",
