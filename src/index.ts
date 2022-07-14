@@ -1,3 +1,1 @@
-import { default as AmauiDiff } from './amaui-diff';
-
-export default AmauiDiff;
+export { default } from './amaui-diff';

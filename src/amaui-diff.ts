@@ -1,4 +1,6 @@
-import { is, merge, stringify } from '@amaui/utils';
+import is from '@amaui/utils/is';
+import merge from '@amaui/utils/merge';
+import stringify from '@amaui/utils/stringify';
 
 export type IDiffItemAction = 'add' | 'a' | 'remove' | 'r';
 
