@@ -1,1 +1,1 @@
-export { default } from './amaui-diff';
+export { default } from './AmauiDiff';

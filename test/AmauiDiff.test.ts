@@ -7,7 +7,7 @@ import { evaluate } from '../utils/js/test/utils';
 
 import AmauiDiff from '../src';
 
-group('@amaui/diff', () => {
+group('AmauiDiff', () => {
 
   group('AmauiDiff', () => {
 
