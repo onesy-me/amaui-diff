@@ -4,11 +4,11 @@
 
 <p align='center'>
   <a target='_blank' rel='noopener noreferrer' href='#'>
-    <img src='utils/images/logo.svg' alt='amaui logo' />
+    <img src='utils/images/logo.svg' alt='onesy logo' />
   </a>
 </p>
 
-<h1 align='center'>amaui Diff</h1>
+<h1 align='center'>onesy Diff</h1>
 
 <p align='center'>
   Own implementation of The Myers Difference Algorithm
@@ -39,27 +39,27 @@
 ### Add
 
 ```sh
-yarn add @amaui/diff
+yarn add @onesy/diff
 ```
 
 ### Use
 
 ```javascript
-  import AmauiDiff from '@amaui/diff';
+  import OnesyDiff from '@onesy/diff';
 
-  // Make a new AmauiDiff instance
+  // Make a new OnesyDiff instance
   // with an optional initial value for options
-  const amauiDiff = new AmauiDiff();
+  const onesyDiff = new OnesyDiff();
 
   // Diff
-  const diff = amauiDiff.diff('aaa', 'aab');
+  const diff = onesyDiff.diff('aaa', 'aab');
 
   // {
   //   items: ['r', 2, 'a', 2, 'b']
   // }
 
   // Update
-  amauiDiff.update('aaa', diff);
+  onesyDiff.update('aaa', diff);
 
   // 'aab'
 ```

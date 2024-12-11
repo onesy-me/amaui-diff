@@ -1,1 +1,1 @@
-export { default } from './AmauiDiff';
+export { default } from './OnesyDiff';

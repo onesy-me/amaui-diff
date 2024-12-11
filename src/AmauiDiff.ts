@@ -1,6 +1,6 @@
-import is from '@amaui/utils/is';
-import merge from '@amaui/utils/merge';
-import stringify from '@amaui/utils/stringify';
+import is from '@onesy/utils/is';
+import merge from '@onesy/utils/merge';
+import stringify from '@onesy/utils/stringify';
 
 export type IDiffItemAction = 'add' | 'a' | 'remove' | 'r';
 
@@ -90,23 +90,23 @@ export const optionsDefault: IOptions = {
   }
 };
 
-class AmauiDiff {
+class OnesyDiff {
   public options: IOptions;
 
-  public static get amauidiff(): AmauiDiff { return new AmauiDiff(); }
+  public static get onesydiff(): OnesyDiff { return new OnesyDiff(); }
 
-  public static get word(): AmauiDiff { return new AmauiDiff(AmauiDiff.OPTIONS.word); }
+  public static get word(): OnesyDiff { return new OnesyDiff(OnesyDiff.OPTIONS.word); }
 
-  public static get line(): AmauiDiff { return new AmauiDiff(AmauiDiff.OPTIONS.line); }
+  public static get line(): OnesyDiff { return new OnesyDiff(OnesyDiff.OPTIONS.line); }
 
-  public static get sentence(): AmauiDiff { return new AmauiDiff(AmauiDiff.OPTIONS.sentence); }
+  public static get sentence(): OnesyDiff { return new OnesyDiff(OnesyDiff.OPTIONS.sentence); }
 
-  public static get json(): AmauiDiff {
-    const options = AmauiDiff.OPTIONS.line;
+  public static get json(): OnesyDiff {
+    const options = OnesyDiff.OPTIONS.line;
 
     options.init.method = (value: any): string => stringify(value);
 
-    return new AmauiDiff(options);
+    return new OnesyDiff(options);
   }
 
   public static get OPTIONS(): IOPTIONS {
@@ -322,7 +322,7 @@ class AmauiDiff {
       const value = options.itemize.method(value_);
 
       if (diff.items?.length) {
-        const updateGroups = AmauiDiff.updateGroups(diff);
+        const updateGroups = OnesyDiff.updateGroups(diff);
 
         updateGroups.forEach(group => {
           const removeGroup = group.every((item: IDiffItem) => ['r', 'remove'].indexOf(item[0]) > -1);
@@ -370,4 +370,4 @@ class AmauiDiff {
   }
 }
 
-export default AmauiDiff;
+export default OnesyDiff;

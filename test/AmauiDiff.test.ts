@@ -1,46 +1,46 @@
 /* tslint:disable: no-shadowed-variable */
-import * as AmauiUtils from '@amaui/utils';
+import * as OnesyUtils from '@onesy/utils';
 
-import { assert } from '@amaui/test';
+import { assert } from '@onesy/test';
 
 import { evaluate } from '../utils/js/test/utils';
 
-import AmauiDiff from '../src';
+import OnesyDiff from '../src';
 
-group('AmauiDiff', () => {
+group('OnesyDiff', () => {
 
-  group('AmauiDiff', () => {
+  group('OnesyDiff', () => {
 
-    to('amauidiff', async () => {
+    to('onesydiff', async () => {
       const values_ = [
-        AmauiDiff.amauidiff instanceof AmauiDiff,
-        AmauiDiff.amauidiff.options.init === AmauiDiff.OPTIONS.default.init,
-        AmauiDiff.amauidiff.options.itemize === AmauiDiff.OPTIONS.default.itemize,
-        AmauiDiff.amauidiff.options.join === AmauiDiff.OPTIONS.default.join,
-        AmauiDiff.amauidiff.options.equal === AmauiDiff.OPTIONS.default.equal,
-        AmauiDiff.amauidiff.update('aaa', AmauiDiff.amauidiff.diff('aaa', 'aab')) === 'aab',
-        AmauiDiff.amauidiff.update('aau', AmauiDiff.amauidiff.diff('aau', 'aay ay')) === 'aay ay',
-        AmauiDiff.amauidiff.update('abcdefk', AmauiDiff.amauidiff.diff('abcdefk', 'bhdefck')) === 'bhdefck',
-        AmauiDiff.amauidiff.update('aaa', AmauiDiff.amauidiff.diff('aaa', 'd')) === 'd',
-        AmauiDiff.amauidiff.update('aaa4aa', AmauiDiff.amauidiff.diff('aaa4aa', 'a44aa')) === 'a44aa',
-        AmauiDiff.amauidiff.update('aaba', AmauiDiff.amauidiff.diff('aaba', 'adaab')) === 'adaab',
-        AmauiDiff.amauidiff.update('aba', AmauiDiff.amauidiff.diff('aba', 'aa')) === 'aa',
+        OnesyDiff.onesydiff instanceof OnesyDiff,
+        OnesyDiff.onesydiff.options.init === OnesyDiff.OPTIONS.default.init,
+        OnesyDiff.onesydiff.options.itemize === OnesyDiff.OPTIONS.default.itemize,
+        OnesyDiff.onesydiff.options.join === OnesyDiff.OPTIONS.default.join,
+        OnesyDiff.onesydiff.options.equal === OnesyDiff.OPTIONS.default.equal,
+        OnesyDiff.onesydiff.update('aaa', OnesyDiff.onesydiff.diff('aaa', 'aab')) === 'aab',
+        OnesyDiff.onesydiff.update('aau', OnesyDiff.onesydiff.diff('aau', 'aay ay')) === 'aay ay',
+        OnesyDiff.onesydiff.update('abcdefk', OnesyDiff.onesydiff.diff('abcdefk', 'bhdefck')) === 'bhdefck',
+        OnesyDiff.onesydiff.update('aaa', OnesyDiff.onesydiff.diff('aaa', 'd')) === 'd',
+        OnesyDiff.onesydiff.update('aaa4aa', OnesyDiff.onesydiff.diff('aaa4aa', 'a44aa')) === 'a44aa',
+        OnesyDiff.onesydiff.update('aaba', OnesyDiff.onesydiff.diff('aaba', 'adaab')) === 'adaab',
+        OnesyDiff.onesydiff.update('aba', OnesyDiff.onesydiff.diff('aba', 'aa')) === 'aa',
       ];
 
       const valueBrowsers = await evaluate((window: any) => {
         const values_ = [
-          window.AmauiDiff.amauidiff instanceof window.AmauiDiff,
-          window.AmauiDiff.amauidiff.options.init === window.AmauiDiff.OPTIONS.default.init,
-          window.AmauiDiff.amauidiff.options.itemize === window.AmauiDiff.OPTIONS.default.itemize,
-          window.AmauiDiff.amauidiff.options.join === window.AmauiDiff.OPTIONS.default.join,
-          window.AmauiDiff.amauidiff.options.equal === window.AmauiDiff.OPTIONS.default.equal,
-          window.AmauiDiff.amauidiff.update('aaa', window.AmauiDiff.amauidiff.diff('aaa', 'aab')) === 'aab',
-          window.AmauiDiff.amauidiff.update('aau', window.AmauiDiff.amauidiff.diff('aau', 'aay ay')) === 'aay ay',
-          window.AmauiDiff.amauidiff.update('abcdefk', window.AmauiDiff.amauidiff.diff('abcdefk', 'bhdefck')) === 'bhdefck',
-          window.AmauiDiff.amauidiff.update('aaa', window.AmauiDiff.amauidiff.diff('aaa', 'd')) === 'd',
-          window.AmauiDiff.amauidiff.update('aaa4aa', window.AmauiDiff.amauidiff.diff('aaa4aa', 'a44aa')) === 'a44aa',
-          window.AmauiDiff.amauidiff.update('aaba', window.AmauiDiff.amauidiff.diff('aaba', 'adaab')) === 'adaab',
-          window.AmauiDiff.amauidiff.update('aba', window.AmauiDiff.amauidiff.diff('aba', 'aa')) === 'aa',
+          window.OnesyDiff.onesydiff instanceof window.OnesyDiff,
+          window.OnesyDiff.onesydiff.options.init === window.OnesyDiff.OPTIONS.default.init,
+          window.OnesyDiff.onesydiff.options.itemize === window.OnesyDiff.OPTIONS.default.itemize,
+          window.OnesyDiff.onesydiff.options.join === window.OnesyDiff.OPTIONS.default.join,
+          window.OnesyDiff.onesydiff.options.equal === window.OnesyDiff.OPTIONS.default.equal,
+          window.OnesyDiff.onesydiff.update('aaa', window.OnesyDiff.onesydiff.diff('aaa', 'aab')) === 'aab',
+          window.OnesyDiff.onesydiff.update('aau', window.OnesyDiff.onesydiff.diff('aau', 'aay ay')) === 'aay ay',
+          window.OnesyDiff.onesydiff.update('abcdefk', window.OnesyDiff.onesydiff.diff('abcdefk', 'bhdefck')) === 'bhdefck',
+          window.OnesyDiff.onesydiff.update('aaa', window.OnesyDiff.onesydiff.diff('aaa', 'd')) === 'd',
+          window.OnesyDiff.onesydiff.update('aaa4aa', window.OnesyDiff.onesydiff.diff('aaa4aa', 'a44aa')) === 'a44aa',
+          window.OnesyDiff.onesydiff.update('aaba', window.OnesyDiff.onesydiff.diff('aaba', 'adaab')) === 'adaab',
+          window.OnesyDiff.onesydiff.update('aba', window.OnesyDiff.onesydiff.diff('aba', 'aa')) === 'aa',
         ];
 
         return values_;
@@ -53,20 +53,20 @@ group('AmauiDiff', () => {
 
     to('word', async () => {
       const values_ = [
-        AmauiDiff.word instanceof AmauiDiff,
-        AmauiDiff.word.options.init === AmauiDiff.OPTIONS.word.init,
-        AmauiDiff.word.options.itemize === AmauiDiff.OPTIONS.word.itemize,
-        AmauiDiff.word.options.join === AmauiDiff.OPTIONS.word.join,
-        AmauiDiff.word.update('aaaa aaaa aaaa', AmauiDiff.word.diff('aaaa aaaa aaaa', 'auaa aaaa ayaa')) === 'auaa aaaa ayaa',
+        OnesyDiff.word instanceof OnesyDiff,
+        OnesyDiff.word.options.init === OnesyDiff.OPTIONS.word.init,
+        OnesyDiff.word.options.itemize === OnesyDiff.OPTIONS.word.itemize,
+        OnesyDiff.word.options.join === OnesyDiff.OPTIONS.word.join,
+        OnesyDiff.word.update('aaaa aaaa aaaa', OnesyDiff.word.diff('aaaa aaaa aaaa', 'auaa aaaa ayaa')) === 'auaa aaaa ayaa',
       ];
 
       const valueBrowsers = await evaluate((window: any) => {
         const values_ = [
-          window.AmauiDiff.word instanceof window.AmauiDiff,
-          window.AmauiDiff.word.options.init === window.AmauiDiff.OPTIONS.word.init,
-          window.AmauiDiff.word.options.itemize === window.AmauiDiff.OPTIONS.word.itemize,
-          window.AmauiDiff.word.options.join === window.AmauiDiff.OPTIONS.word.join,
-          window.AmauiDiff.word.update('aaaa aaaa aaaa', window.AmauiDiff.word.diff('aaaa aaaa aaaa', 'auaa aaaa ayaa')) === 'auaa aaaa ayaa',
+          window.OnesyDiff.word instanceof window.OnesyDiff,
+          window.OnesyDiff.word.options.init === window.OnesyDiff.OPTIONS.word.init,
+          window.OnesyDiff.word.options.itemize === window.OnesyDiff.OPTIONS.word.itemize,
+          window.OnesyDiff.word.options.join === window.OnesyDiff.OPTIONS.word.join,
+          window.OnesyDiff.word.update('aaaa aaaa aaaa', window.OnesyDiff.word.diff('aaaa aaaa aaaa', 'auaa aaaa ayaa')) === 'auaa aaaa ayaa',
         ];
 
         return values_;
@@ -120,11 +120,11 @@ public static ImageIcon getImageIcon(String path)
 // /**`;
 
       const values_ = [
-        AmauiDiff.line instanceof AmauiDiff,
-        AmauiDiff.line.options.init === AmauiDiff.OPTIONS.line.init,
-        AmauiDiff.line.options.itemize === AmauiDiff.OPTIONS.line.itemize,
-        AmauiDiff.line.options.join === AmauiDiff.OPTIONS.line.join,
-        AmauiDiff.line.update(value, AmauiDiff.line.diff(value, value1)) === value1,
+        OnesyDiff.line instanceof OnesyDiff,
+        OnesyDiff.line.options.init === OnesyDiff.OPTIONS.line.init,
+        OnesyDiff.line.options.itemize === OnesyDiff.OPTIONS.line.itemize,
+        OnesyDiff.line.options.join === OnesyDiff.OPTIONS.line.join,
+        OnesyDiff.line.update(value, OnesyDiff.line.diff(value, value1)) === value1,
       ];
 
       const valueBrowsers = await evaluate((window: any) => {
@@ -170,11 +170,11 @@ public static ImageIcon getImageIcon(String path)
 // /**`;
 
         const values_ = [
-          window.AmauiDiff.line instanceof window.AmauiDiff,
-          window.AmauiDiff.line.options.init === window.AmauiDiff.OPTIONS.line.init,
-          window.AmauiDiff.line.options.itemize === window.AmauiDiff.OPTIONS.line.itemize,
-          window.AmauiDiff.line.options.join === window.AmauiDiff.OPTIONS.line.join,
-          window.AmauiDiff.line.update(value, window.AmauiDiff.line.diff(value, value1)) === value1,
+          window.OnesyDiff.line instanceof window.OnesyDiff,
+          window.OnesyDiff.line.options.init === window.OnesyDiff.OPTIONS.line.init,
+          window.OnesyDiff.line.options.itemize === window.OnesyDiff.OPTIONS.line.itemize,
+          window.OnesyDiff.line.options.join === window.OnesyDiff.OPTIONS.line.join,
+          window.OnesyDiff.line.update(value, window.OnesyDiff.line.diff(value, value1)) === value1,
         ];
 
         return values_;
@@ -190,11 +190,11 @@ public static ImageIcon getImageIcon(String path)
       const value1 = 'Lorem u ipsum dolor sit amet, consectetur adipiscing elit. Fuscem dolor em, facilisis sed eratr sit amet, pharetra blandit augue. Aed id placerat felis, malesuada rutrum nisl. In ultrices sed mauris finibus mmalesuad. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer cursus, odio id rutrum blandit, neque velit aliquam odio, at rhoncus elit est nec erat. Proin egestassed maurelit, eratr sit molestie nisi semper at. A.';
 
       const values_ = [
-        AmauiDiff.sentence instanceof AmauiDiff,
-        AmauiDiff.sentence.options.init === AmauiDiff.OPTIONS.sentence.init,
-        AmauiDiff.sentence.options.itemize === AmauiDiff.OPTIONS.sentence.itemize,
-        AmauiDiff.sentence.options.join === AmauiDiff.OPTIONS.sentence.join,
-        AmauiDiff.sentence.update(value, AmauiDiff.sentence.diff(value, value1)) === value1,
+        OnesyDiff.sentence instanceof OnesyDiff,
+        OnesyDiff.sentence.options.init === OnesyDiff.OPTIONS.sentence.init,
+        OnesyDiff.sentence.options.itemize === OnesyDiff.OPTIONS.sentence.itemize,
+        OnesyDiff.sentence.options.join === OnesyDiff.OPTIONS.sentence.join,
+        OnesyDiff.sentence.update(value, OnesyDiff.sentence.diff(value, value1)) === value1,
       ];
 
       const valueBrowsers = await evaluate((window: any) => {
@@ -202,11 +202,11 @@ public static ImageIcon getImageIcon(String path)
         const value1 = 'Lorem u ipsum dolor sit amet, consectetur adipiscing elit. Fuscem dolor em, facilisis sed eratr sit amet, pharetra blandit augue. Aed id placerat felis, malesuada rutrum nisl. In ultrices sed mauris finibus mmalesuad. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer cursus, odio id rutrum blandit, neque velit aliquam odio, at rhoncus elit est nec erat. Proin egestassed maurelit, eratr sit molestie nisi semper at. A.';
 
         const values_ = [
-          window.AmauiDiff.sentence instanceof window.AmauiDiff,
-          window.AmauiDiff.sentence.options.init === window.AmauiDiff.OPTIONS.sentence.init,
-          window.AmauiDiff.sentence.options.itemize === window.AmauiDiff.OPTIONS.sentence.itemize,
-          window.AmauiDiff.sentence.options.join === window.AmauiDiff.OPTIONS.sentence.join,
-          window.AmauiDiff.sentence.update(value, window.AmauiDiff.sentence.diff(value, value1)) === value1,
+          window.OnesyDiff.sentence instanceof window.OnesyDiff,
+          window.OnesyDiff.sentence.options.init === window.OnesyDiff.OPTIONS.sentence.init,
+          window.OnesyDiff.sentence.options.itemize === window.OnesyDiff.OPTIONS.sentence.itemize,
+          window.OnesyDiff.sentence.options.join === window.OnesyDiff.OPTIONS.sentence.join,
+          window.OnesyDiff.sentence.update(value, window.OnesyDiff.sentence.diff(value, value1)) === value1,
         ];
 
         return values_;
@@ -221,78 +221,78 @@ public static ImageIcon getImageIcon(String path)
 
       to('array', async () => {
         const value = [
-          'AmauiError',
-          'AmauiTestError',
+          'OnesyError',
+          'OnesyTestError',
           'AssertError',
           'AuthenticationError',
           'AuthorizationError',
           'ValidationError',
           'NotFoundError',
           'PermissionError',
-          'AmauiAmqpError',
-          'AmauiAwsError',
-          'AmauiMongoError',
+          'OnesyAmqpError',
+          'OnesyAwsError',
+          'OnesyMongoError',
           'ConnectionError',
           'DeveloperError',
         ];
         const value1 = [
-          'AmauiError',
-          'AmauiTestError',
+          'OnesyError',
+          'OnesyTestError',
           'AuthenticationError',
           'AuthorizationError',
           'ValidationError',
           'NotFoundError',
           'PermissionError',
-          'AmauiAmqpError',
-          'AmauiAwsError',
-          'AmauiMongoError',
+          'OnesyAmqpError',
+          'OnesyAwsError',
+          'OnesyMongoError',
           'ConnectionError',
           'DeveloperError',
         ];
 
         const values_ = [
-          AmauiDiff.json instanceof AmauiDiff,
-          AmauiDiff.json.options.itemize === AmauiDiff.OPTIONS.line.itemize,
-          AmauiDiff.json.options.join === AmauiDiff.OPTIONS.line.join,
-          AmauiUtils.equalDeep(AmauiUtils.parse(AmauiDiff.json.update(value, AmauiDiff.json.diff(value, value1))), value1),
+          OnesyDiff.json instanceof OnesyDiff,
+          OnesyDiff.json.options.itemize === OnesyDiff.OPTIONS.line.itemize,
+          OnesyDiff.json.options.join === OnesyDiff.OPTIONS.line.join,
+          OnesyUtils.equalDeep(OnesyUtils.parse(OnesyDiff.json.update(value, OnesyDiff.json.diff(value, value1))), value1),
         ];
 
         const valueBrowsers = await evaluate((window: any) => {
           const value = [
-            'AmauiError',
-            'AmauiTestError',
+            'OnesyError',
+            'OnesyTestError',
             'AssertError',
             'AuthenticationError',
             'AuthorizationError',
             'ValidationError',
             'NotFoundError',
             'PermissionError',
-            'AmauiAmqpError',
-            'AmauiAwsError',
-            'AmauiMongoError',
+            'OnesyAmqpError',
+            'OnesyAwsError',
+            'OnesyMongoError',
             'ConnectionError',
             'DeveloperError',
           ];
           const value1 = [
-            'AmauiError',
-            'AmauiTestError',
+            'OnesyError',
+            'OnesyTestError',
             'AuthenticationError',
             'AuthorizationError',
             'ValidationError',
             'NotFoundError',
             'PermissionError',
-            'AmauiAmqpError',
-            'AmauiAwsError',
-            'AmauiMongoError',
+            'OnesyAmqpError',
+            'OnesyAwsError',
+            'OnesyMongoError',
             'ConnectionError',
             'DeveloperError',
           ];
 
           const values_ = [
-            window.AmauiDiff.json instanceof window.AmauiDiff,
-            window.AmauiDiff.json.options.itemize === window.AmauiDiff.OPTIONS.line.itemize,
-            window.AmauiDiff.json.options.join === window.AmauiDiff.OPTIONS.line.join,
-            window.AmauiUtils.equalDeep(window.AmauiUtils.parse(window.AmauiDiff.json.update(value, window.AmauiDiff.json.diff(value, value1))), value1),
+            window.OnesyDiff.json instanceof window.OnesyDiff,
+            window.OnesyDiff.json.options.itemize === window.OnesyDiff.OPTIONS.line.itemize,
+            window.OnesyDiff.json.options.join === window.OnesyDiff.OPTIONS.line.join,
+            window.OnesyUtils.equalDeep(window.OnesyUtils.parse(window.OnesyDiff.json.update(value, window.OnesyDiff.json.diff(value, value1))), value1),
           ];
 
           return values_;
@@ -328,10 +328,10 @@ public static ImageIcon getImageIcon(String path)
         };
 
         const values_ = [
-          AmauiDiff.json instanceof AmauiDiff,
-          AmauiDiff.json.options.itemize === AmauiDiff.OPTIONS.line.itemize,
-          AmauiDiff.json.options.join === AmauiDiff.OPTIONS.line.join,
-          AmauiUtils.equalDeep(AmauiUtils.parse(AmauiDiff.json.update(value, AmauiDiff.json.diff(value, value1))), value1),
+          OnesyDiff.json instanceof OnesyDiff,
+          OnesyDiff.json.options.itemize === OnesyDiff.OPTIONS.line.itemize,
+          OnesyDiff.json.options.join === OnesyDiff.OPTIONS.line.join,
+          OnesyUtils.equalDeep(OnesyUtils.parse(OnesyDiff.json.update(value, OnesyDiff.json.diff(value, value1))), value1),
         ];
 
         const valueBrowsers = await evaluate((window: any) => {
@@ -359,10 +359,10 @@ public static ImageIcon getImageIcon(String path)
           };
 
           const values_ = [
-            window.AmauiDiff.json instanceof window.AmauiDiff,
-            window.AmauiDiff.json.options.itemize === window.AmauiDiff.OPTIONS.line.itemize,
-            window.AmauiDiff.json.options.join === window.AmauiDiff.OPTIONS.line.join,
-            window.AmauiUtils.equalDeep(window.AmauiUtils.parse(window.AmauiDiff.json.update(value, window.AmauiDiff.json.diff(value, value1))), value1),
+            window.OnesyDiff.json instanceof window.OnesyDiff,
+            window.OnesyDiff.json.options.itemize === window.OnesyDiff.OPTIONS.line.itemize,
+            window.OnesyDiff.json.options.join === window.OnesyDiff.OPTIONS.line.join,
+            window.OnesyUtils.equalDeep(window.OnesyUtils.parse(window.OnesyDiff.json.update(value, window.OnesyDiff.json.diff(value, value1))), value1),
           ];
 
           return values_;
@@ -377,36 +377,36 @@ public static ImageIcon getImageIcon(String path)
 
     to('OPTIONS', async () => {
       const values_ = [
-        AmauiUtils.is('function', AmauiDiff.OPTIONS.default.init.method),
-        AmauiUtils.is('function', AmauiDiff.OPTIONS.default.itemize.method),
-        AmauiUtils.is('function', AmauiDiff.OPTIONS.default.join.method),
-        AmauiUtils.is('function', AmauiDiff.OPTIONS.default.equal.method),
-        AmauiUtils.is('function', AmauiDiff.OPTIONS.word.init.method),
-        AmauiUtils.is('function', AmauiDiff.OPTIONS.word.itemize.method),
-        AmauiUtils.is('function', AmauiDiff.OPTIONS.word.join.method),
-        AmauiUtils.is('function', AmauiDiff.OPTIONS.line.init.method),
-        AmauiUtils.is('function', AmauiDiff.OPTIONS.line.itemize.method),
-        AmauiUtils.is('function', AmauiDiff.OPTIONS.line.join.method),
-        AmauiUtils.is('function', AmauiDiff.OPTIONS.sentence.init.method),
-        AmauiUtils.is('function', AmauiDiff.OPTIONS.sentence.itemize.method),
-        AmauiUtils.is('function', AmauiDiff.OPTIONS.sentence.join.method),
+        OnesyUtils.is('function', OnesyDiff.OPTIONS.default.init.method),
+        OnesyUtils.is('function', OnesyDiff.OPTIONS.default.itemize.method),
+        OnesyUtils.is('function', OnesyDiff.OPTIONS.default.join.method),
+        OnesyUtils.is('function', OnesyDiff.OPTIONS.default.equal.method),
+        OnesyUtils.is('function', OnesyDiff.OPTIONS.word.init.method),
+        OnesyUtils.is('function', OnesyDiff.OPTIONS.word.itemize.method),
+        OnesyUtils.is('function', OnesyDiff.OPTIONS.word.join.method),
+        OnesyUtils.is('function', OnesyDiff.OPTIONS.line.init.method),
+        OnesyUtils.is('function', OnesyDiff.OPTIONS.line.itemize.method),
+        OnesyUtils.is('function', OnesyDiff.OPTIONS.line.join.method),
+        OnesyUtils.is('function', OnesyDiff.OPTIONS.sentence.init.method),
+        OnesyUtils.is('function', OnesyDiff.OPTIONS.sentence.itemize.method),
+        OnesyUtils.is('function', OnesyDiff.OPTIONS.sentence.join.method),
       ];
 
       const valueBrowsers = await evaluate((window: any) => {
         const values_ = [
-          window.AmauiUtils.is('function', window.AmauiDiff.OPTIONS.default.init.method),
-          window.AmauiUtils.is('function', window.AmauiDiff.OPTIONS.default.itemize.method),
-          window.AmauiUtils.is('function', window.AmauiDiff.OPTIONS.default.join.method),
-          window.AmauiUtils.is('function', window.AmauiDiff.OPTIONS.default.equal.method),
-          window.AmauiUtils.is('function', window.AmauiDiff.OPTIONS.word.init.method),
-          window.AmauiUtils.is('function', window.AmauiDiff.OPTIONS.word.itemize.method),
-          window.AmauiUtils.is('function', window.AmauiDiff.OPTIONS.word.join.method),
-          window.AmauiUtils.is('function', window.AmauiDiff.OPTIONS.line.init.method),
-          window.AmauiUtils.is('function', window.AmauiDiff.OPTIONS.line.itemize.method),
-          window.AmauiUtils.is('function', window.AmauiDiff.OPTIONS.line.join.method),
-          window.AmauiUtils.is('function', window.AmauiDiff.OPTIONS.sentence.init.method),
-          window.AmauiUtils.is('function', window.AmauiDiff.OPTIONS.sentence.itemize.method),
-          window.AmauiUtils.is('function', window.AmauiDiff.OPTIONS.sentence.join.method),
+          window.OnesyUtils.is('function', window.OnesyDiff.OPTIONS.default.init.method),
+          window.OnesyUtils.is('function', window.OnesyDiff.OPTIONS.default.itemize.method),
+          window.OnesyUtils.is('function', window.OnesyDiff.OPTIONS.default.join.method),
+          window.OnesyUtils.is('function', window.OnesyDiff.OPTIONS.default.equal.method),
+          window.OnesyUtils.is('function', window.OnesyDiff.OPTIONS.word.init.method),
+          window.OnesyUtils.is('function', window.OnesyDiff.OPTIONS.word.itemize.method),
+          window.OnesyUtils.is('function', window.OnesyDiff.OPTIONS.word.join.method),
+          window.OnesyUtils.is('function', window.OnesyDiff.OPTIONS.line.init.method),
+          window.OnesyUtils.is('function', window.OnesyDiff.OPTIONS.line.itemize.method),
+          window.OnesyUtils.is('function', window.OnesyDiff.OPTIONS.line.join.method),
+          window.OnesyUtils.is('function', window.OnesyDiff.OPTIONS.sentence.init.method),
+          window.OnesyUtils.is('function', window.OnesyDiff.OPTIONS.sentence.itemize.method),
+          window.OnesyUtils.is('function', window.OnesyDiff.OPTIONS.sentence.join.method),
         ];
 
         return values_;
@@ -419,42 +419,42 @@ public static ImageIcon getImageIcon(String path)
 
   });
 
-  group('amauiDiff', () => {
+  group('onesyDiff', () => {
 
-    to('amauidiff', async () => {
-      const amauiDiff = new AmauiDiff();
+    to('onesydiff', async () => {
+      const onesyDiff = new OnesyDiff();
 
       const values_ = [
-        amauiDiff instanceof AmauiDiff,
-        amauiDiff.options.init === AmauiDiff.OPTIONS.default.init,
-        amauiDiff.options.itemize === AmauiDiff.OPTIONS.default.itemize,
-        amauiDiff.options.join === AmauiDiff.OPTIONS.default.join,
-        amauiDiff.options.equal === AmauiDiff.OPTIONS.default.equal,
-        amauiDiff.update('aaa', amauiDiff.diff('aaa', 'aab')) === 'aab',
-        amauiDiff.update('aau', amauiDiff.diff('aau', 'aay ay')) === 'aay ay',
-        amauiDiff.update('abcdefk', amauiDiff.diff('abcdefk', 'bhdefck')) === 'bhdefck',
-        amauiDiff.update('aaa', amauiDiff.diff('aaa', 'd')) === 'd',
-        amauiDiff.update('aaa4aa', amauiDiff.diff('aaa4aa', 'a44aa')) === 'a44aa',
-        amauiDiff.update('aaba', amauiDiff.diff('aaba', 'adaab')) === 'adaab',
-        amauiDiff.update('aba', amauiDiff.diff('aba', 'aa')) === 'aa',
+        onesyDiff instanceof OnesyDiff,
+        onesyDiff.options.init === OnesyDiff.OPTIONS.default.init,
+        onesyDiff.options.itemize === OnesyDiff.OPTIONS.default.itemize,
+        onesyDiff.options.join === OnesyDiff.OPTIONS.default.join,
+        onesyDiff.options.equal === OnesyDiff.OPTIONS.default.equal,
+        onesyDiff.update('aaa', onesyDiff.diff('aaa', 'aab')) === 'aab',
+        onesyDiff.update('aau', onesyDiff.diff('aau', 'aay ay')) === 'aay ay',
+        onesyDiff.update('abcdefk', onesyDiff.diff('abcdefk', 'bhdefck')) === 'bhdefck',
+        onesyDiff.update('aaa', onesyDiff.diff('aaa', 'd')) === 'd',
+        onesyDiff.update('aaa4aa', onesyDiff.diff('aaa4aa', 'a44aa')) === 'a44aa',
+        onesyDiff.update('aaba', onesyDiff.diff('aaba', 'adaab')) === 'adaab',
+        onesyDiff.update('aba', onesyDiff.diff('aba', 'aa')) === 'aa',
       ];
 
       const valueBrowsers = await evaluate((window: any) => {
-        const amauiDiff = new window.AmauiDiff();
+        const onesyDiff = new window.OnesyDiff();
 
         const values_ = [
-          amauiDiff instanceof window.AmauiDiff,
-          amauiDiff.options.init === window.AmauiDiff.OPTIONS.default.init,
-          amauiDiff.options.itemize === window.AmauiDiff.OPTIONS.default.itemize,
-          amauiDiff.options.join === window.AmauiDiff.OPTIONS.default.join,
-          amauiDiff.options.equal === window.AmauiDiff.OPTIONS.default.equal,
-          amauiDiff.update('aaa', amauiDiff.diff('aaa', 'aab')) === 'aab',
-          amauiDiff.update('aau', amauiDiff.diff('aau', 'aay ay')) === 'aay ay',
-          amauiDiff.update('abcdefk', amauiDiff.diff('abcdefk', 'bhdefck')) === 'bhdefck',
-          amauiDiff.update('aaa', amauiDiff.diff('aaa', 'd')) === 'd',
-          amauiDiff.update('aaa4aa', amauiDiff.diff('aaa4aa', 'a44aa')) === 'a44aa',
-          amauiDiff.update('aaba', amauiDiff.diff('aaba', 'adaab')) === 'adaab',
-          amauiDiff.update('aba', amauiDiff.diff('aba', 'aa')) === 'aa',
+          onesyDiff instanceof window.OnesyDiff,
+          onesyDiff.options.init === window.OnesyDiff.OPTIONS.default.init,
+          onesyDiff.options.itemize === window.OnesyDiff.OPTIONS.default.itemize,
+          onesyDiff.options.join === window.OnesyDiff.OPTIONS.default.join,
+          onesyDiff.options.equal === window.OnesyDiff.OPTIONS.default.equal,
+          onesyDiff.update('aaa', onesyDiff.diff('aaa', 'aab')) === 'aab',
+          onesyDiff.update('aau', onesyDiff.diff('aau', 'aay ay')) === 'aay ay',
+          onesyDiff.update('abcdefk', onesyDiff.diff('abcdefk', 'bhdefck')) === 'bhdefck',
+          onesyDiff.update('aaa', onesyDiff.diff('aaa', 'd')) === 'd',
+          onesyDiff.update('aaa4aa', onesyDiff.diff('aaa4aa', 'a44aa')) === 'a44aa',
+          onesyDiff.update('aaba', onesyDiff.diff('aaba', 'adaab')) === 'adaab',
+          onesyDiff.update('aba', onesyDiff.diff('aba', 'aa')) === 'aa',
         ];
 
         return values_;
@@ -468,17 +468,17 @@ public static ImageIcon getImageIcon(String path)
     group('options', () => {
 
       to('init', async () => {
-        const amauiDiff = new AmauiDiff({ init: { method: value => 'a' + value } });
+        const onesyDiff = new OnesyDiff({ init: { method: value => 'a' + value } });
 
         const values_ = [
-          amauiDiff.update('aaa', amauiDiff.diff('aaa', 'aab')) === 'aaab',
+          onesyDiff.update('aaa', onesyDiff.diff('aaa', 'aab')) === 'aaab',
         ];
 
         const valueBrowsers = await evaluate((window: any) => {
-          const amauiDiff = new window.AmauiDiff({ init: { method: value => 'a' + value } });
+          const onesyDiff = new window.OnesyDiff({ init: { method: value => 'a' + value } });
 
           const values_ = [
-            amauiDiff.update('aaa', amauiDiff.diff('aaa', 'aab')) === 'aaab',
+            onesyDiff.update('aaa', onesyDiff.diff('aaa', 'aab')) === 'aaab',
           ];
 
           return values_;
@@ -490,17 +490,17 @@ public static ImageIcon getImageIcon(String path)
       });
 
       to('itemize', async () => {
-        const amauiDiff = new AmauiDiff({ itemize: { method: value => value.split('aa') } });
+        const onesyDiff = new OnesyDiff({ itemize: { method: value => value.split('aa') } });
 
         const values_ = [
-          amauiDiff.update('aaa', amauiDiff.diff('aaa', 'aad')) === 'd',
+          onesyDiff.update('aaa', onesyDiff.diff('aaa', 'aad')) === 'd',
         ];
 
         const valueBrowsers = await evaluate((window: any) => {
-          const amauiDiff = new window.AmauiDiff({ itemize: { method: value => value.split('aa') } });
+          const onesyDiff = new window.OnesyDiff({ itemize: { method: value => value.split('aa') } });
 
           const values_ = [
-            amauiDiff.update('aaa', amauiDiff.diff('aaa', 'aad')) === 'd',
+            onesyDiff.update('aaa', onesyDiff.diff('aaa', 'aad')) === 'd',
           ];
 
           return values_;
@@ -512,17 +512,17 @@ public static ImageIcon getImageIcon(String path)
       });
 
       to('join', async () => {
-        const amauiDiff = new AmauiDiff({ join: { method: value => value.join(' ') } });
+        const onesyDiff = new OnesyDiff({ join: { method: value => value.join(' ') } });
 
         const values_ = [
-          amauiDiff.update('aaa', amauiDiff.diff('aaa', 'aad')) === 'a a d',
+          onesyDiff.update('aaa', onesyDiff.diff('aaa', 'aad')) === 'a a d',
         ];
 
         const valueBrowsers = await evaluate((window: any) => {
-          const amauiDiff = new window.AmauiDiff({ join: { method: value => value.join(' ') } });
+          const onesyDiff = new window.OnesyDiff({ join: { method: value => value.join(' ') } });
 
           const values_ = [
-            amauiDiff.update('aaa', amauiDiff.diff('aaa', 'aad')) === 'a a d',
+            onesyDiff.update('aaa', onesyDiff.diff('aaa', 'aad')) === 'a a d',
           ];
 
           return values_;
@@ -534,19 +534,19 @@ public static ImageIcon getImageIcon(String path)
       });
 
       to('equal', async () => {
-        const amauiDiff = new AmauiDiff({ equal: { method: (value, value1) => +value % 2 === +value1 % 2 } });
+        const onesyDiff = new OnesyDiff({ equal: { method: (value, value1) => +value % 2 === +value1 % 2 } });
 
         const values_ = [
-          amauiDiff.diff('aa17', 'aa74'),
-          amauiDiff.update('aa17', amauiDiff.diff('aa17', 'aa74')) === 'aa14',
+          onesyDiff.diff('aa17', 'aa74'),
+          onesyDiff.update('aa17', onesyDiff.diff('aa17', 'aa74')) === 'aa14',
         ];
 
         const valueBrowsers = await evaluate((window: any) => {
-          const amauiDiff = new window.AmauiDiff({ equal: { method: (value, value1) => +value % 2 === +value1 % 2 } });
+          const onesyDiff = new window.OnesyDiff({ equal: { method: (value, value1) => +value % 2 === +value1 % 2 } });
 
           const values_ = [
-            amauiDiff.diff('aa17', 'aa74'),
-            amauiDiff.update('aa17', amauiDiff.diff('aa17', 'aa74')) === 'aa14',
+            onesyDiff.diff('aa17', 'aa74'),
+            onesyDiff.update('aa17', onesyDiff.diff('aa17', 'aa74')) === 'aa14',
           ];
 
           return values_;
@@ -564,16 +564,16 @@ public static ImageIcon getImageIcon(String path)
 
         to('compress', async () => {
           const values_ = [
-            new AmauiDiff().diff('aaa', 'aab'),
-            new AmauiDiff({ output: { compressed: true } }).diff('aaa', 'aab'),
-            new AmauiDiff({ output: { compressed: false } }).diff('aaa', 'aab'),
+            new OnesyDiff().diff('aaa', 'aab'),
+            new OnesyDiff({ output: { compressed: true } }).diff('aaa', 'aab'),
+            new OnesyDiff({ output: { compressed: false } }).diff('aaa', 'aab'),
           ];
 
           const valueBrowsers = await evaluate((window: any) => {
             const values_ = [
-              new window.AmauiDiff().diff('aaa', 'aab'),
-              new window.AmauiDiff({ output: { compressed: true } }).diff('aaa', 'aab'),
-              new window.AmauiDiff({ output: { compressed: false } }).diff('aaa', 'aab'),
+              new window.OnesyDiff().diff('aaa', 'aab'),
+              new window.OnesyDiff({ output: { compressed: true } }).diff('aaa', 'aab'),
+              new window.OnesyDiff({ output: { compressed: false } }).diff('aaa', 'aab'),
             ];
 
             return values_;
@@ -593,29 +593,29 @@ public static ImageIcon getImageIcon(String path)
     });
 
     to('diff', async () => {
-      const amauiDiff = new AmauiDiff();
+      const onesyDiff = new OnesyDiff();
 
       const values_ = [
-        amauiDiff.diff('aaa', 'aab'),
-        amauiDiff.diff('aau', 'aay ay'),
-        amauiDiff.diff('abcdefk', 'bhdefck'),
-        amauiDiff.diff('aaa', 'd'),
-        amauiDiff.diff('aaa4aa', 'a44aa'),
-        amauiDiff.diff('aaba', 'adaab'),
-        amauiDiff.diff('aba', 'aa'),
+        onesyDiff.diff('aaa', 'aab'),
+        onesyDiff.diff('aau', 'aay ay'),
+        onesyDiff.diff('abcdefk', 'bhdefck'),
+        onesyDiff.diff('aaa', 'd'),
+        onesyDiff.diff('aaa4aa', 'a44aa'),
+        onesyDiff.diff('aaba', 'adaab'),
+        onesyDiff.diff('aba', 'aa'),
       ];
 
       const valueBrowsers = await evaluate((window: any) => {
-        const amauiDiff = new window.AmauiDiff();
+        const onesyDiff = new window.OnesyDiff();
 
         const values_ = [
-          amauiDiff.diff('aaa', 'aab'),
-          amauiDiff.diff('aau', 'aay ay'),
-          amauiDiff.diff('abcdefk', 'bhdefck'),
-          amauiDiff.diff('aaa', 'd'),
-          amauiDiff.diff('aaa4aa', 'a44aa'),
-          amauiDiff.diff('aaba', 'adaab'),
-          amauiDiff.diff('aba', 'aa'),
+          onesyDiff.diff('aaa', 'aab'),
+          onesyDiff.diff('aau', 'aay ay'),
+          onesyDiff.diff('abcdefk', 'bhdefck'),
+          onesyDiff.diff('aaa', 'd'),
+          onesyDiff.diff('aaa4aa', 'a44aa'),
+          onesyDiff.diff('aaba', 'adaab'),
+          onesyDiff.diff('aba', 'aa'),
         ];
 
         return values_;
@@ -636,29 +636,29 @@ public static ImageIcon getImageIcon(String path)
     });
 
     to('updateGroups', async () => {
-      const amauiDiff = new AmauiDiff();
+      const onesyDiff = new OnesyDiff();
 
       const values_ = [
-        AmauiDiff.updateGroups(amauiDiff.diff('aaa', 'aab')),
-        AmauiDiff.updateGroups(amauiDiff.diff('aau', 'aay ay')),
-        AmauiDiff.updateGroups(amauiDiff.diff('abcdefk', 'bhdefck')),
-        AmauiDiff.updateGroups(amauiDiff.diff('aaa', 'd')),
-        AmauiDiff.updateGroups(amauiDiff.diff('aaa4aa', 'a44aa')),
-        AmauiDiff.updateGroups(amauiDiff.diff('aaba', 'adaab')),
-        AmauiDiff.updateGroups(amauiDiff.diff('aba', 'aa')),
+        OnesyDiff.updateGroups(onesyDiff.diff('aaa', 'aab')),
+        OnesyDiff.updateGroups(onesyDiff.diff('aau', 'aay ay')),
+        OnesyDiff.updateGroups(onesyDiff.diff('abcdefk', 'bhdefck')),
+        OnesyDiff.updateGroups(onesyDiff.diff('aaa', 'd')),
+        OnesyDiff.updateGroups(onesyDiff.diff('aaa4aa', 'a44aa')),
+        OnesyDiff.updateGroups(onesyDiff.diff('aaba', 'adaab')),
+        OnesyDiff.updateGroups(onesyDiff.diff('aba', 'aa')),
       ];
 
       const valueBrowsers = await evaluate((window: any) => {
-        const amauiDiff = new window.AmauiDiff();
+        const onesyDiff = new window.OnesyDiff();
 
         const values_ = [
-          window.AmauiDiff.updateGroups(amauiDiff.diff('aaa', 'aab')),
-          window.AmauiDiff.updateGroups(amauiDiff.diff('aau', 'aay ay')),
-          window.AmauiDiff.updateGroups(amauiDiff.diff('abcdefk', 'bhdefck')),
-          window.AmauiDiff.updateGroups(amauiDiff.diff('aaa', 'd')),
-          window.AmauiDiff.updateGroups(amauiDiff.diff('aaa4aa', 'a44aa')),
-          window.AmauiDiff.updateGroups(amauiDiff.diff('aaba', 'adaab')),
-          window.AmauiDiff.updateGroups(amauiDiff.diff('aba', 'aa')),
+          window.OnesyDiff.updateGroups(onesyDiff.diff('aaa', 'aab')),
+          window.OnesyDiff.updateGroups(onesyDiff.diff('aau', 'aay ay')),
+          window.OnesyDiff.updateGroups(onesyDiff.diff('abcdefk', 'bhdefck')),
+          window.OnesyDiff.updateGroups(onesyDiff.diff('aaa', 'd')),
+          window.OnesyDiff.updateGroups(onesyDiff.diff('aaa4aa', 'a44aa')),
+          window.OnesyDiff.updateGroups(onesyDiff.diff('aaba', 'adaab')),
+          window.OnesyDiff.updateGroups(onesyDiff.diff('aba', 'aa')),
         ];
 
         return values_;
@@ -678,29 +678,29 @@ public static ImageIcon getImageIcon(String path)
     });
 
     to('update', async () => {
-      const amauiDiff = new AmauiDiff();
+      const onesyDiff = new OnesyDiff();
 
       const values_ = [
-        amauiDiff.update('aaa', amauiDiff.diff('aaa', 'aab')) === 'aab',
-        amauiDiff.update('aau', amauiDiff.diff('aau', 'aay ay')) === 'aay ay',
-        amauiDiff.update('abcdefk', amauiDiff.diff('abcdefk', 'bhdefck')) === 'bhdefck',
-        amauiDiff.update('aaa', amauiDiff.diff('aaa', 'd')) === 'd',
-        amauiDiff.update('aaa4aa', amauiDiff.diff('aaa4aa', 'a44aa')) === 'a44aa',
-        amauiDiff.update('aaba', amauiDiff.diff('aaba', 'adaab')) === 'adaab',
-        amauiDiff.update('aba', amauiDiff.diff('aba', 'aa')) === 'aa',
+        onesyDiff.update('aaa', onesyDiff.diff('aaa', 'aab')) === 'aab',
+        onesyDiff.update('aau', onesyDiff.diff('aau', 'aay ay')) === 'aay ay',
+        onesyDiff.update('abcdefk', onesyDiff.diff('abcdefk', 'bhdefck')) === 'bhdefck',
+        onesyDiff.update('aaa', onesyDiff.diff('aaa', 'd')) === 'd',
+        onesyDiff.update('aaa4aa', onesyDiff.diff('aaa4aa', 'a44aa')) === 'a44aa',
+        onesyDiff.update('aaba', onesyDiff.diff('aaba', 'adaab')) === 'adaab',
+        onesyDiff.update('aba', onesyDiff.diff('aba', 'aa')) === 'aa',
       ];
 
       const valueBrowsers = await evaluate((window: any) => {
-        const amauiDiff = new window.AmauiDiff();
+        const onesyDiff = new window.OnesyDiff();
 
         const values_ = [
-          amauiDiff.update('aaa', amauiDiff.diff('aaa', 'aab')) === 'aab',
-          amauiDiff.update('aau', amauiDiff.diff('aau', 'aay ay')) === 'aay ay',
-          amauiDiff.update('abcdefk', amauiDiff.diff('abcdefk', 'bhdefck')) === 'bhdefck',
-          amauiDiff.update('aaa', amauiDiff.diff('aaa', 'd')) === 'd',
-          amauiDiff.update('aaa4aa', amauiDiff.diff('aaa4aa', 'a44aa')) === 'a44aa',
-          amauiDiff.update('aaba', amauiDiff.diff('aaba', 'adaab')) === 'adaab',
-          amauiDiff.update('aba', amauiDiff.diff('aba', 'aa')) === 'aa',
+          onesyDiff.update('aaa', onesyDiff.diff('aaa', 'aab')) === 'aab',
+          onesyDiff.update('aau', onesyDiff.diff('aau', 'aay ay')) === 'aay ay',
+          onesyDiff.update('abcdefk', onesyDiff.diff('abcdefk', 'bhdefck')) === 'bhdefck',
+          onesyDiff.update('aaa', onesyDiff.diff('aaa', 'd')) === 'd',
+          onesyDiff.update('aaa4aa', onesyDiff.diff('aaa4aa', 'a44aa')) === 'a44aa',
+          onesyDiff.update('aaba', onesyDiff.diff('aaba', 'adaab')) === 'adaab',
+          onesyDiff.update('aba', onesyDiff.diff('aba', 'aa')) === 'aa',
         ];
 
         return values_;
