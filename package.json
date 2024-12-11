@@ -2,7 +2,7 @@
   "name": "@onesy/diff",
   "version": "1.0.1",
   "description": "Diff algorithm",
-  "repository": "https://github.com/onesy-org/onesy-diff.git",
+  "repository": "https://github.com/onesy-me/diff.git",
   "author": "Lazar <lazareric.com@gmail.com>",
   "license": "MIT",
   "private": false,
